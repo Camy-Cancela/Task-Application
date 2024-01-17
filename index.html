@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Task Manager</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="Profile">
+        <div id="Date">
+          <span id="currentDate"></span>
+          <span id="currentTime"></span>
+        </div>
+
+        <h1>Welcome, Camila Cancela</h1>
+        <span>We will achieve your goals.</span>
+      </div>
+
+      <div class="Add-Task">
+        <input type="text" id="input" placeholder="Add task" maxlength="50" />
+        <button id="enterButton" onclick="addTask()">
+          <i class="fas fa-plus-square"></i>
+        </button>
+      </div>
+
+      <div class="Tasks-Section">
+        <h3>Here are your pending tasks</h3>
+        <ul id="List"></ul>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
