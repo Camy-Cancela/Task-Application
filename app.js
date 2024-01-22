@@ -126,8 +126,11 @@ if (data) {
   LIST = [];
   id = 0;
 }
+
 function listLoading(DATA) {
   DATA.forEach(function (i) {
-    AddTask(i.nombre, i.id, i.Completed, i.Delete);
+    if (!i.Delete) {
+      AddTask(i.nombre, i.id, i.Completed, i.Delete);
+    }
   });
 }
