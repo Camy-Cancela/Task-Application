@@ -70,6 +70,7 @@ function completedTask(element) {
 function deleteTask(element) {
   element.parentNode.parentNode.removeChild(element.parentNode);
   LIST[element.id].Delete = true;
+  localStorage.setItem("TODO", JSON.stringify(LIST));
 }
 
 enterButton.addEventListener("click", () => {
@@ -129,8 +130,6 @@ if (data) {
 
 function listLoading(DATA) {
   DATA.forEach(function (i) {
-    if (!i.Delete) {
-      AddTask(i.nombre, i.id, i.Completed, i.Delete);
-    }
+    AddTask(i.nombre, i.id, i.Completed, i.Delete);
   });
 }
